@@ -2,9 +2,10 @@
 	"name": "vscode-fish-text",
 	"displayName": "Рыбный Текст",
 	"description": "Adds russian \"fish\" text",
-	"version": "0.0.0",
+  "version": "1.0.0",
+  "repository": "https://github.com/mamoru-kun/vscode-fish-text",
 	"engines": {
-		"vscode": ">=1.18.0"
+		"vscode": "^1.18.0"
 	},
 	"categories": [
 		"Other"
@@ -19,7 +20,21 @@
 				"command": "fishtext.addParagraph",
 				"title": "РыбаТекст: Добавить абзац текста"
 			}
-		]
+    ],
+    "snippets": [
+      {
+        "languages": [
+          "html",
+          "javascriptreact",
+          "typescriptreact",
+          "handlebars",
+          "plaintext",
+          "php",
+          "markdown",
+          "jade"
+        ]
+      }
+    ]
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
