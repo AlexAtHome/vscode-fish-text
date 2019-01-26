@@ -1,16 +1,28 @@
 # vscode-fish-text
 
-_This package will be more useful for russian speaking users. Basically, it adds a russian alternative of "lorem ipsum" based on universal speech code (see image below)._
+_This package is more useful for russian speaking users. Basically, it adds a russian alternative of "lorem ipsum" based on universal speech code (see the image below)._
 
 Этот пакет позволит прямо в редакторе добавить "рыбный" текст, составленный по универсальному коду речей.
 
-![Универсальный код речей](http://apikabu.ru/img/a5ca6d.jpg)
+![Выдержка из старого советского документа с таблицей с универсальным кодом речей](http://apikabu.ru/img/a5ca6d.jpg)
 
 ## Как пользоваться?
 
 Используйте сниппеты `рыба` и `fish`. Они добавляют текст из трёх предложений.
 
+![Использование сниппета "рыба".gif](./.github/1.gif)
+
+Также в конце сниппета `рыба`/`fish` добавить число предложений, которое нужно добавить.
+
+![Использование сниппета "рыба" из определённого количества предложений.gif](./.github/2.gif)
+
 Для языков, где используются HTML-теги, доступны сниппеты `рыбатег` и `fishtag`, которые добавляют текст, завёрнутым в HTML-тег на выбор (по умолчанию - `<p>`).
+
+![Использование сниппета "рыба" в HTML.gif](./.github/3-html.gif)
+
+Вышеописанное также работает в Pug (Jade).
+
+![Использование сниппета "рыба" в Pug.gif](./.github/4-pug.gif)
 
 ## А зачем?
 
