@@ -1,4 +1,4 @@
-import * as vscode from 'vscode';
+import * as vscode from 'vscode'
 
 import {
   getFishTextCompletions,
@@ -9,7 +9,7 @@ import {
 const MAX_PARAGRAPHS = 10
 
 export function activate(context: vscode.ExtensionContext) {
-  console.log('[vscode-fish-text] Activated!');
+  console.log('[vscode-fish-text] Activated!')
 
   let htmlSpecificLanguages: string[] = [
     'html',

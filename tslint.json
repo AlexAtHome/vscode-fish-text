@@ -6,9 +6,9 @@
 		"curly": true,
 		"class-name": true,
 		"semicolon": [
-			false,
-			"always"
-		],
+      false,
+      "never"
+    ],
 		"triple-equals": true
 	},
 	"defaultSeverity": "warning"
