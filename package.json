@@ -2,7 +2,7 @@
 	"name": "vscode-fish-text",
 	"displayName": "Рыбный Текст",
 	"description": "Adds russian \"fish\" text",
-	"version": "1.0.0",
+	"version": "0.0.0",
 	"engines": {
 		"vscode": ">=1.18.0"
 	},
