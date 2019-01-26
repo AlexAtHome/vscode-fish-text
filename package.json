@@ -1,5 +1,6 @@
 {
-	"name": "vscode-fish-text",
+  "name": "vscode-fish-text",
+  "publisher": "mamoru",
 	"displayName": "Рыбный Текст",
 	"description": "Adds russian \"fish\" text",
   "version": "1.0.0",
