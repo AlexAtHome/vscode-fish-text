@@ -1,8 +1,22 @@
 {
 	"name": "vscode-fish-text",
 	"displayName": "Рыбный Текст",
-	"description": "Adds russian \"fish\" text",
-	"version": "1.0.0",
+  "description": "Adds russian \"fish\" text",
+  "publisher": "mamoruuu",
+  "galleryBanner": {
+    "color": "#c42b44"
+  },
+  "author": {
+    "name": "mamoruuu",
+    "url": "https://mamoruuuu.github.io"
+  },
+  "repository": {
+		"type": "git",
+		"url": "https://github.com/mamoruuu/vscode-fish-text.git"
+	},
+  "icon": ".github/carpe.png",
+  "version": "1.0.0",
+  "license": "MIT",
 	"engines": {
 		"vscode": ">=1.18.0"
 	},
@@ -36,6 +50,6 @@
 		"@types/mocha": "^2.2.42"
 	},
 	"dependencies": {
-		"speech-code": "^1.0.2"
+		"speech-code": "1.0.3"
 	}
 }
