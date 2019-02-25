@@ -1,22 +1,22 @@
 {
-  "name": "vscode-fish-text",
-  "publisher": "mamoru",
+	"name": "vscode-fish-text",
+	"publisher": "mamoru",
 	"displayName": "Рыбный Текст",
-  "description": "Adds russian \"fish\" text",
-  "galleryBanner": {
-    "color": "#c42b44"
-  },
-  "author": {
-    "name": "mamoruuu",
-    "url": "https://mamoruuuu.github.io"
-  },
-  "repository": {
+	"description": "Adds russian \"fish\" text",
+	"galleryBanner": {
+		"color": "#c42b44"
+	},
+	"author": {
+		"name": "mamoruuu",
+		"url": "https://mamoruuuu.github.io"
+	},
+	"repository": {
 		"type": "git",
 		"url": "https://github.com/mamoruuu/vscode-fish-text.git"
 	},
-  "icon": ".github/carpe.png",
-  "version": "1.0.0",
-  "license": "MIT",
+	"icon": ".github/carpe.png",
+	"version": "1.0.1",
+	"license": "MIT",
 	"engines": {
 		"vscode": "^1.18.0"
 	},
@@ -33,21 +33,21 @@
 				"command": "fishtext.addParagraph",
 				"title": "РыбаТекст: Добавить абзац текста"
 			}
-    ],
-    "snippets": [
-      {
-        "languages": [
-          "html",
-          "javascriptreact",
-          "typescriptreact",
-          "handlebars",
-          "plaintext",
-          "php",
-          "markdown",
-          "jade"
-        ]
-      }
-    ]
+		],
+		"snippets": [
+			{
+				"languages": [
+					"html",
+					"javascriptreact",
+					"typescriptreact",
+					"handlebars",
+					"plaintext",
+					"php",
+					"markdown",
+					"jade"
+				]
+			}
+		]
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
