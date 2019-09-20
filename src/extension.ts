@@ -5,8 +5,7 @@ import {
   getFishHTMLCompletions,
   getFishJadeCompletions
 } from './fish'
-
-const MAX_PARAGRAPHS = 10
+import { MAX_PARAGRAPHS } from './model'
 
 export function activate(context: vscode.ExtensionContext) {
   console.log('[vscode-fish-text] Activated!')
