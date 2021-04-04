@@ -8,14 +8,14 @@
     "theme": "dark"
   },
   "author": {
-    "name": "mamoruuu",
-    "url": "https://mamoruuuu.github.io"
+    "name": "Alexander Bolotskov",
+    "url": "https://mamoruuu.github.io"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/mamoruuu/vscode-fish-text.git"
   },
-  "icon": ".github/carpe.png",
+  "icon": "images/carpe.png",
   "version": "1.0.2",
   "license": "MIT",
   "engines": {
