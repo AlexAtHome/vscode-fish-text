@@ -11,3 +11,5 @@ vsc-extension-quickstart.md
 .editorconfig
 yarn.lock
 package-lock.json
+
+.github
