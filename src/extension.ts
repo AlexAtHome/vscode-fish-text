@@ -6,37 +6,29 @@ import {
   getFishJadeCompletions
 } from './snippets'
 import { MAX_PARAGRAPHS } from './model'
+import { getConfig, Setting } from './config'
+
+/** Extension config */
+const config = getConfig()
 
 export function activate(context: vscode.ExtensionContext) {
-  console.log('[vscode-fish-text] Activated!')
+  const htmlSpecificLanguages = config.get<string[]>(Setting.HTML_LANGS) ?? []
+  const pugSpecificLanguages = config.get<string[]>(Setting.PUG_LANGS) ?? []
+  const languages = config.get<string[]>(Setting.LANGS) ?? []
 
-  let htmlSpecificLanguages: string[] = [
-    'html',
-    'javascriptreact',
-    'typescriptreact'
-  ]
-  let languages: string[] = [
-    ...htmlSpecificLanguages,
-    'handlebars',
-    'plaintext',
-    'php',
-    'markdown',
-    'jade'
-  ]
-
-	let provider = vscode.languages.registerCompletionItemProvider(languages, {
+	const provider = vscode.languages.registerCompletionItemProvider(languages, {
     provideCompletionItems() {
       return getFishTextCompletions(MAX_PARAGRAPHS)
     }
   })
 
-	let htmlSpecificProvider = vscode.languages.registerCompletionItemProvider(htmlSpecificLanguages, {
+	const htmlSpecificProvider = vscode.languages.registerCompletionItemProvider(htmlSpecificLanguages, {
     provideCompletionItems() {
       return getFishHTMLCompletions(MAX_PARAGRAPHS)
     }
   })
 
-	let pugSpecificProvider = vscode.languages.registerCompletionItemProvider('jade', {
+	const pugSpecificProvider = vscode.languages.registerCompletionItemProvider(pugSpecificLanguages, {
     provideCompletionItems() {
       return getFishJadeCompletions(MAX_PARAGRAPHS)
     }

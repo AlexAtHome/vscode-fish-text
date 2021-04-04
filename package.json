@@ -34,6 +34,59 @@
         "command": "fishtext.addParagraph",
         "title": "Рыбный Текст: Добавить абзац текста"
       }
+    ],
+    "configuration": [
+      {
+        "title": "Рыбный Текст: Конфигурация",
+        "type": "object",
+        "properties": {
+          "fish-text.snippetLanguages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "default": [
+              "html",
+              "javascriptreact",
+              "typescriptreact",
+              "handlebars",
+              "plaintext",
+              "php",
+              "markdown",
+              "jade"
+            ],
+            "description": "Указывает, в каких языках должен работать сниппет для текста (`рыба`)"
+          },
+          "fish-text.htmlSnippetLanguages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "default": [
+              "html",
+              "javascriptreact",
+              "typescriptreact",
+              "php"
+            ],
+            "description": "Указывает, в каких языках должен работать сниппет для текста в HTML-теге (`рыбатег`)"
+          },
+          "fish-text.pugSnippetLanguages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "default": [
+              "jade"
+            ],
+            "description": "Указывает, в каких языках должен работать сниппет для текста в HTML-теге, как в Pug (`рыбатег`)"
+          },
+          "fish-text.isEnglishSnippetEnabled": {
+            "type": "boolean",
+            "default": true,
+            "description": "Включает сниппеты `fish` и `fishtag`"
+          }
+        }
+      }
     ]
   },
   "scripts": {
