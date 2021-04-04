@@ -22,6 +22,10 @@ _This package is more useful for russian speaking users. Basically, it adds a ru
 
 ![Использование сниппета "рыба" в Pug.gif](https://github.com/mamoruuu/vscode-fish-text/raw/main/.github/4-pug.gif)
 
+Список языков программирования, в котором будут работать сниппеты, можно изменять в настройках редактора.
+
+![Настройки расширения](https://github.com/mamoruuu/vscode-fish-text/raw/main/.github/settings.png)
+
 ## А зачем?
 
 Данный плагин будет полезен верстальщикам, которым нужно быстро откуда-то достать стенку текста *на кириллице* (пусть и бессмысленного). Русский текст на русскоязычных сайтах смотрится куда более органично.
