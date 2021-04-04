@@ -4,7 +4,7 @@ import {
   getFishTextCompletions,
   getFishHTMLCompletions,
   getFishJadeCompletions
-} from './fish'
+} from './snippets'
 import { MAX_PARAGRAPHS } from './model'
 
 export function activate(context: vscode.ExtensionContext) {

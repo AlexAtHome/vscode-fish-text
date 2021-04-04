@@ -1,4 +1,4 @@
-import {fishTextCompletionFactory} from './get-completions-factory'
+import {fishTextCompletionFactory} from './snippets-factories'
 
 export const getFishTextCompletions = fishTextCompletionFactory({
   prefix: {
@@ -7,11 +7,11 @@ export const getFishTextCompletions = fishTextCompletionFactory({
   },
   documentation: {
     ru: 'Добавляет русский рыбный текст.',
-    en: 'Добавляет русский рыбный текст.\n\nАнглийский вариант сниппета.',
+    en: 'Добавляет русский рыбный текст.\n\nТо же самое, что и `рыба`.',
   },
   documentationVariants: {
     ru: 'Добавляет русский рыбный текст из {i} предложений.',
-    en: 'Добавляет русский рыбный текст из {i} предложений.\n\nАнглийский вариант сниппета.',
+    en: 'Добавляет русский рыбный текст из {i} предложений.\n\nТо же самое, что и `рыба`.',
   }
 })
 
@@ -22,11 +22,11 @@ export const getFishHTMLCompletions = fishTextCompletionFactory({
   },
   documentation: {
     ru: 'Добавляет русский рыбный текст, но в HTML-теге `<p>`.',
-    en: 'Добавляет русский рыбный текст, но в HTML-теге `<p>`.\n\nАнглийский вариант сниппета.',
+    en: 'Добавляет русский рыбный текст, но в HTML-теге `<p>`.\n\nТо же самое, что и `рыбатег`.',
   },
   documentationVariants: {
     ru: 'Добавляет русский рыбный текст из {i} предложений, но в HTML-теге `<p>`.',
-    en: 'Добавляет русский рыбный текст из {i} предложений, но в HTML-теге `<p>`.\n\nАнглийский вариант сниппета.',
+    en: 'Добавляет русский рыбный текст из {i} предложений, но в HTML-теге `<p>`.\n\nТо же самое, что и `рыбатег`.',
   },
   beforeText: '<${1|p,span,div,strong,em,b,i|}${2}>',
   afterText: '</${1}>${0}',
@@ -39,11 +39,11 @@ export const getFishJadeCompletions = fishTextCompletionFactory({
   },
   documentation: {
     ru: 'Добавляет русский рыбный текст, но в HTML-теге `<p>`.',
-    en: 'Добавляет русский рыбный текст, но в HTML-теге `<p>`.\n\nАнглийский вариант сниппета.',
+    en: 'Добавляет русский рыбный текст, но в HTML-теге `<p>`.\n\nТо же самое, что и `рыбатег`.',
   },
   documentationVariants: {
     ru: 'Добавляет русский рыбный текст из {i} предложений, но в HTML-теге `<p>`.',
-    en: 'Добавляет русский рыбный текст из {i} предложений, но в HTML-теге `<p>`.\n\nАнглийский вариант сниппета.',
+    en: 'Добавляет русский рыбный текст из {i} предложений, но в HTML-теге `<p>`.\n\nТо же самое, что и `рыбатег`.',
   },
   beforeText: '${1|p,span,div,strong,em,b,i|} ',
   afterText: '${0}',
