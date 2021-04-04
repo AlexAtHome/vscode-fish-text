@@ -1,5 +1,9 @@
 # VS Code Fish Text
 
+## 1.1.0
+- Added Settings section for this extension. This allows you to changes the languages list where snippets work.
+- Updated extension's dependencies (`speech-code`, `typescript`, `vscode` is replaced with `@types/vscode`).
+
 ## 1.0.2
 - Refactored the extension's code
 
