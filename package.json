@@ -16,7 +16,7 @@
     "url": "https://github.com/mamoruuu/vscode-fish-text.git"
   },
   "icon": "images/carpe.png",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "license": "MIT",
   "engines": {
     "vscode": "^1.18.0"
