@@ -10,6 +10,7 @@ import { getConfig, Setting } from './config'
 
 /** Extension config */
 const config = getConfig()
+const listeners = new Set<vscode.Disposable>()
 
 export function activate(context: vscode.ExtensionContext) {
   const htmlSpecificLanguages = config.get<string[]>(Setting.HTML_LANGS) ?? []
@@ -21,18 +22,29 @@ export function activate(context: vscode.ExtensionContext) {
       return getFishTextCompletions(MAX_PARAGRAPHS)
     }
   })
+  listeners.add(provider)
 
 	const htmlSpecificProvider = vscode.languages.registerCompletionItemProvider(htmlSpecificLanguages, {
     provideCompletionItems() {
       return getFishHTMLCompletions(MAX_PARAGRAPHS)
     }
   })
+  listeners.add(htmlSpecificProvider)
 
 	const pugSpecificProvider = vscode.languages.registerCompletionItemProvider(pugSpecificLanguages, {
     provideCompletionItems() {
       return getFishJadeCompletions(MAX_PARAGRAPHS)
     }
   })
+  listeners.add(pugSpecificProvider)
 
   context.subscriptions.push(provider, htmlSpecificProvider, pugSpecificProvider)
+}
+
+export function deactivate() {
+  cleanUp()
+}
+
+function cleanUp() {
+  listeners.forEach(listener => listener.dispose())
 }
