@@ -2,9 +2,10 @@
   "name": "vscode-fish-text",
   "publisher": "mamoru",
   "displayName": "Рыбный Текст",
-  "description": "Adds russian \"fish\" text",
+  "description": "Adds substitutional text in Russian",
   "galleryBanner": {
-    "color": "#c42b44"
+    "color": "#f4dfc2",
+    "theme": "dark"
   },
   "author": {
     "name": "mamoruuu",
@@ -31,7 +32,7 @@
     "commands": [
       {
         "command": "fishtext.addParagraph",
-        "title": "РыбаТекст: Добавить абзац текста"
+        "title": "Рыбный Текст: Добавить абзац текста"
       }
     ]
   },

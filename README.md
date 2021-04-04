@@ -8,19 +8,19 @@ _This package is more useful for russian speaking users. Basically, it adds a ru
 
 Используйте сниппеты `рыба` и `fish`. Они добавляют текст из трёх предложений.
 
-![Использование сниппета "рыба".gif](./.github/1.gif)
+![Использование сниппета "рыба".gif](https://github.com/mamoruuu/vscode-fish-text/raw/main/.github/1.gif)
 
 Также в конце сниппета `рыба`/`fish` добавить число предложений, которое нужно добавить.
 
-![Использование сниппета "рыба" из определённого количества предложений.gif](./.github/2.gif)
+![Использование сниппета "рыба" из определённого количества предложений.gif](https://github.com/mamoruuu/vscode-fish-text/raw/main/.github/2.gif)
 
 Для языков, где используются HTML-теги, доступны сниппеты `рыбатег` и `fishtag`, которые добавляют текст, завёрнутым в HTML-тег на выбор (по умолчанию - `<p>`).
 
-![Использование сниппета "рыба" в HTML.gif](./.github/3-html.gif)
+![Использование сниппета "рыба" в HTML.gif](https://github.com/mamoruuu/vscode-fish-text/raw/main/.github/3-html.gif)
 
 Вышеописанное также работает в Pug (Jade).
 
-![Использование сниппета "рыба" в Pug.gif](./.github/4-pug.gif)
+![Использование сниппета "рыба" в Pug.gif](https://github.com/mamoruuu/vscode-fish-text/raw/main/.github/4-pug.gif)
 
 ## А зачем?
 
@@ -30,7 +30,7 @@ _This package is more useful for russian speaking users. Basically, it adds a ru
 
 ## Что это за магия? Почему такой складный текст?
 
-![Выдержка из старого советского документа с таблицей с универсальным кодом речей](.github/fish-text-sample.jpg)
+![Выдержка из старого советского документа с таблицей с универсальным кодом речей](https://github.com/mamoruuu/vscode-fish-text/raw/main/.github/fish-text-sample.jpg)
 
 ## LICENSE
 
