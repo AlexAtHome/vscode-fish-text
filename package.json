@@ -51,6 +51,6 @@
     "@types/mocha": "^2.2.42"
   },
   "dependencies": {
-    "speech-code": "1.0.3"
+    "speech-code": "1.3.1"
   }
 }
