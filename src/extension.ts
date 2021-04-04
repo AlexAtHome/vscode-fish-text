@@ -39,6 +39,18 @@ export function activate(context: vscode.ExtensionContext) {
   listeners.add(pugSpecificProvider)
 
   context.subscriptions.push(provider, htmlSpecificProvider, pugSpecificProvider)
+
+  vscode.workspace.onDidChangeConfiguration((event: vscode.ConfigurationChangeEvent) => {
+    if (!event.affectsConfiguration('fish-text')) {
+      return
+    }
+    const reloadButton = "Перезагрузить"
+    vscode.window.showWarningMessage('Чтобы применить изменения, требуется перезагрузить окно редактора.', reloadButton).then(value => {
+      if (value === reloadButton) {
+        vscode.commands.executeCommand('workbench.action.reloadWindow')
+      }
+    })
+  })
 }
 
 export function deactivate() {
