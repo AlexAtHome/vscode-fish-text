@@ -1,10 +1,6 @@
 import * as vscode from 'vscode'
 
-import {
-  getFishTextCompletions,
-  getFishHTMLCompletions,
-  getFishJadeCompletions
-} from './snippets'
+import { getFishTextCompletions, getFishHTMLCompletions, getFishJadeCompletions } from './snippets'
 import { MAX_PARAGRAPHS } from './model'
 import { getConfig, Setting } from './config'
 
@@ -17,24 +13,24 @@ export function activate(context: vscode.ExtensionContext) {
   const pugSpecificLanguages = config.get<string[]>(Setting.PUG_LANGS) ?? []
   const languages = config.get<string[]>(Setting.LANGS) ?? []
 
-	const provider = vscode.languages.registerCompletionItemProvider(languages, {
+  const provider = vscode.languages.registerCompletionItemProvider(languages, {
     provideCompletionItems() {
       return getFishTextCompletions(MAX_PARAGRAPHS)
-    }
+    },
   })
   listeners.add(provider)
 
-	const htmlSpecificProvider = vscode.languages.registerCompletionItemProvider(htmlSpecificLanguages, {
+  const htmlSpecificProvider = vscode.languages.registerCompletionItemProvider(htmlSpecificLanguages, {
     provideCompletionItems() {
       return getFishHTMLCompletions(MAX_PARAGRAPHS)
-    }
+    },
   })
   listeners.add(htmlSpecificProvider)
 
-	const pugSpecificProvider = vscode.languages.registerCompletionItemProvider(pugSpecificLanguages, {
+  const pugSpecificProvider = vscode.languages.registerCompletionItemProvider(pugSpecificLanguages, {
     provideCompletionItems() {
       return getFishJadeCompletions(MAX_PARAGRAPHS)
-    }
+    },
   })
   listeners.add(pugSpecificProvider)
 
@@ -44,12 +40,14 @@ export function activate(context: vscode.ExtensionContext) {
     if (!event.affectsConfiguration('fish-text')) {
       return
     }
-    const reloadButton = "Перезагрузить"
-    vscode.window.showWarningMessage('Чтобы применить изменения, требуется перезагрузить окно редактора.', reloadButton).then(value => {
-      if (value === reloadButton) {
-        vscode.commands.executeCommand('workbench.action.reloadWindow')
-      }
-    })
+    const reloadButton = 'Перезагрузить'
+    vscode.window
+      .showWarningMessage('Чтобы применить изменения, требуется перезагрузить окно редактора.', reloadButton)
+      .then(value => {
+        if (value === reloadButton) {
+          vscode.commands.executeCommand('workbench.action.reloadWindow')
+        }
+      })
   })
 }
 

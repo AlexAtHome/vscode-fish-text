@@ -1,4 +1,4 @@
-import { CompletionItem } from "vscode"
+import { CompletionItem } from 'vscode'
 
 export const MAX_PARAGRAPHS = 10 as const
 

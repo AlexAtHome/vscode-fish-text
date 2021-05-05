@@ -1,4 +1,4 @@
-import {fishTextCompletionFactory} from './snippets-factories'
+import { fishTextCompletionFactory } from './snippets-factories'
 
 export const getFishTextCompletions = fishTextCompletionFactory({
   prefix: {
@@ -12,7 +12,7 @@ export const getFishTextCompletions = fishTextCompletionFactory({
   documentationVariants: {
     ru: 'Добавляет русский рыбный текст из {i} предложений.',
     en: 'Добавляет русский рыбный текст из {i} предложений.\n\nТо же самое, что и `рыба`.',
-  }
+  },
 })
 
 export const getFishHTMLCompletions = fishTextCompletionFactory({

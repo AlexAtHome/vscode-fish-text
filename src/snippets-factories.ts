@@ -1,11 +1,11 @@
-import { CompletionItem, SnippetString, MarkdownString } from "vscode"
-import { getParagraph } from "speech-code"
-import { IFishTextCompletionMetadata, TFishTextCompletionFactory } from "./model"
-import { getConfig, Setting } from "./config"
+import { CompletionItem, SnippetString, MarkdownString } from 'vscode'
+import { getParagraph } from 'speech-code'
+import { IFishTextCompletionMetadata, TFishTextCompletionFactory } from './model'
+import { getConfig, Setting } from './config'
 
 export const fishTextCompletionFactory = (metadata: IFishTextCompletionMetadata): TFishTextCompletionFactory => {
-  const {prefix, documentation, documentationVariants, beforeText = '', afterText = ''} = metadata
-  const isEnglishEnabled = getConfig().get(Setting.IS_ENGLISH_ENABLED) ?? false;
+  const { prefix, documentation, documentationVariants, beforeText = '', afterText = '' } = metadata
+  const isEnglishEnabled = getConfig().get(Setting.IS_ENGLISH_ENABLED) ?? false
 
   return (amount = 3) => {
     const completionItem = new CompletionItem(prefix.ru)
@@ -14,7 +14,7 @@ export const fishTextCompletionFactory = (metadata: IFishTextCompletionMetadata)
       completionItem.documentation = new MarkdownString(documentation.ru)
     }
 
-    const result = [completionItem];
+    const result = [completionItem]
 
     if (isEnglishEnabled) {
       const completionItemEng = new CompletionItem(prefix.en)
