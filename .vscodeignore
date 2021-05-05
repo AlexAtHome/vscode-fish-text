@@ -11,5 +11,12 @@ vsc-extension-quickstart.md
 .editorconfig
 yarn.lock
 package-lock.json
+.eslintrc.js
+.eslintrc.json
+.eslintrc
+.prettierrc.yml
+.prettierrc.yaml
+.prettierrc.js
+.prettierrc.json
 
 .github
