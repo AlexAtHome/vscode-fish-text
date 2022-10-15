@@ -5,7 +5,10 @@ import { getConfig, Setting } from './config'
 
 export const fishTextCompletionFactory = (metadata: IFishTextCompletionMetadata): TFishTextCompletionFactory => {
   const { prefix, documentation, documentationVariants, beforeText = '', afterText = '' } = metadata
-  const isEnglishEnabled = getConfig().get(Setting.IS_ENGLISH_ENABLED) ?? false
+  const config = getConfig()
+  const isEnglishSnippetEnabled = config.get(Setting.IS_ENGLISH_SNIPPET_ENABLED) ?? false
+  const isEnglishTextEnabled = config.get(Setting.IS_ENGLISH_TEXT_ENABLED) ?? false
+  const englishSnippetTextLanguage = isEnglishTextEnabled ? 'en' : 'ru'
 
   return (amount = 3) => {
     const completionItem = new CompletionItem(prefix.ru)
@@ -16,9 +19,11 @@ export const fishTextCompletionFactory = (metadata: IFishTextCompletionMetadata)
 
     const result = [completionItem]
 
-    if (isEnglishEnabled) {
+    if (isEnglishSnippetEnabled) {
       const completionItemEng = new CompletionItem(prefix.en)
-      completionItemEng.insertText = new SnippetString(`${beforeText}${getParagraph(3, 'en')}${afterText}`)
+      completionItemEng.insertText = new SnippetString(
+        `${beforeText}${getParagraph(3, englishSnippetTextLanguage)}${afterText}`
+      )
       if (documentation?.en) {
         completionItemEng.documentation = new MarkdownString(documentation.en)
       }
@@ -34,9 +39,11 @@ export const fishTextCompletionFactory = (metadata: IFishTextCompletionMetadata)
       }
       result.push(completion)
 
-      if (isEnglishEnabled) {
+      if (isEnglishSnippetEnabled) {
         let completionEng = new CompletionItem(`${prefix.en}${i}`)
-        completionEng.insertText = new SnippetString(`${beforeText}${getParagraph(i, 'en')}${afterText}`)
+        completionEng.insertText = new SnippetString(
+          `${beforeText}${getParagraph(i, englishSnippetTextLanguage)}${afterText}`
+        )
         if (documentationVariants?.en) {
           completionEng.documentation = new MarkdownString(documentationVariants.en.replace('{i}', i.toString()))
         }

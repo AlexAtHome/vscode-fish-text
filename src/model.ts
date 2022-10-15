@@ -1,21 +1,21 @@
 import { CompletionItem } from 'vscode'
 
-export const MAX_PARAGRAPHS = 10 as const
+export const MAX_PARAGRAPHS = 10
 
-export enum Languages {
+export enum Language {
   RU = 'ru',
   EN = 'en',
 }
 
 export interface IFishTextCompletionMetadata {
   prefix: {
-    [lang in Languages]: string
+    [lang in Language]: string
   }
   documentation?: {
-    [lang in Languages]?: string
+    [lang in Language]?: string
   }
   documentationVariants?: {
-    [lang in Languages]?: string
+    [lang in Language]?: string
   }
   beforeText?: string
   afterText?: string

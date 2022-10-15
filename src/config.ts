@@ -7,7 +7,8 @@ export enum Setting {
   HTML_LANGS = 'htmlSnippetLanguages',
   PUG_LANGS = 'pugSnippetLanguages',
   LANGS = 'snippetLanguages',
-  IS_ENGLISH_ENABLED = 'isEnglishSnippetEnabled',
+  IS_ENGLISH_SNIPPET_ENABLED = 'isEnglishSnippetEnabled',
+  IS_ENGLISH_TEXT_ENABLED = 'isEnglishTextEnabled'
 }
 
 /**
@@ -17,7 +18,8 @@ export type FishTextConfig = WorkspaceConfiguration & {
   [Setting.LANGS]: string[]
   [Setting.HTML_LANGS]: string[]
   [Setting.PUG_LANGS]: string[]
-  [Setting.IS_ENGLISH_ENABLED]: boolean
+  [Setting.IS_ENGLISH_SNIPPET_ENABLED]: boolean
+  [Setting.IS_ENGLISH_TEXT_ENABLED]: boolean
 }
 
 /**

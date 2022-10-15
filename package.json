@@ -11,7 +11,7 @@
     "name": "Alexander Bolotskov"
   },
   "repository": {
-    "type": "git",
+    "type": "url",
     "url": "https://github.com/AlexAtHome/vscode-fish-text"
   },
   "icon": "images/carpe.png",
@@ -83,6 +83,11 @@
             "type": "boolean",
             "default": true,
             "description": "Включает сниппеты `fish` и `fishtag`"
+          },
+          "fish-text.isEnglishTextEnabled": {
+            "type": "boolean",
+            "default": false,
+            "description": "Generates the English text with snippets `fish` and `fishtag`."
           }
         }
       }
