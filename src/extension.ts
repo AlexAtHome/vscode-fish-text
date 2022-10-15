@@ -40,9 +40,9 @@ export function activate(context: vscode.ExtensionContext) {
     if (!event.affectsConfiguration('fish-text')) {
       return
     }
-    const reloadButton = 'Перезагрузить'
+    const reloadButton = 'Reload'
     vscode.window
-      .showWarningMessage('Чтобы применить изменения, требуется перезагрузить окно редактора.', reloadButton)
+      .showWarningMessage('The window reload is required to apply the new configuration.', reloadButton)
       .then(value => {
         if (value === reloadButton) {
           vscode.commands.executeCommand('workbench.action.reloadWindow')

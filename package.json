@@ -31,12 +31,12 @@
     "commands": [
       {
         "command": "fishtext.addParagraph",
-        "title": "Рыбный Текст: Добавить абзац текста"
+        "title": "Fish Text: Generate a paragraph"
       }
     ],
     "configuration": [
       {
-        "title": "Рыбный Текст: Конфигурация",
+        "title": "Fish Text Config",
         "type": "object",
         "properties": {
           "fish-text.snippetLanguages": {
@@ -54,7 +54,7 @@
               "markdown",
               "jade"
             ],
-            "description": "Указывает, в каких языках должен работать сниппет для текста (`рыба`)"
+            "description": "The list of languages where the snippets are available."
           },
           "fish-text.htmlSnippetLanguages": {
             "type": "array",
@@ -67,7 +67,7 @@
               "typescriptreact",
               "php"
             ],
-            "description": "Указывает, в каких языках должен работать сниппет для текста в HTML-теге (`рыбатег`)"
+            "description": "The list of languages where the snippets for HTML are available."
           },
           "fish-text.pugSnippetLanguages": {
             "type": "array",
@@ -77,12 +77,12 @@
             "default": [
               "jade"
             ],
-            "description": "Указывает, в каких языках должен работать сниппет для текста в HTML-теге, как в Pug (`рыбатег`)"
+            "description": "The list of languages where the snippets for Pug (Jade) are available."
           },
           "fish-text.isEnglishSnippetEnabled": {
             "type": "boolean",
             "default": true,
-            "description": "Включает сниппеты `fish` и `fishtag`"
+            "description": "Enables the snippets `fish` and `fishtag`"
           },
           "fish-text.isEnglishTextEnabled": {
             "type": "boolean",
