@@ -9,7 +9,7 @@ export const fishTextCompletionFactory = (metadata: IFishTextCompletionMetadata)
 
   return (amount = 3) => {
     const completionItem = new CompletionItem(prefix.ru)
-    completionItem.insertText = new SnippetString(`${beforeText}${getParagraph(3)}${afterText}`)
+    completionItem.insertText = new SnippetString(`${beforeText}${getParagraph(3, 'ru')}${afterText}`)
     if (documentation?.ru) {
       completionItem.documentation = new MarkdownString(documentation.ru)
     }
@@ -18,7 +18,7 @@ export const fishTextCompletionFactory = (metadata: IFishTextCompletionMetadata)
 
     if (isEnglishEnabled) {
       const completionItemEng = new CompletionItem(prefix.en)
-      completionItemEng.insertText = new SnippetString(`${beforeText}${getParagraph(3)}${afterText}`)
+      completionItemEng.insertText = new SnippetString(`${beforeText}${getParagraph(3, 'en')}${afterText}`)
       if (documentation?.en) {
         completionItemEng.documentation = new MarkdownString(documentation.en)
       }
@@ -28,7 +28,7 @@ export const fishTextCompletionFactory = (metadata: IFishTextCompletionMetadata)
 
     for (let i = 1; i <= amount; i++) {
       let completion = new CompletionItem(`${prefix.ru}${i}`)
-      completion.insertText = new SnippetString(`${beforeText}${getParagraph(i)}${afterText}`)
+      completion.insertText = new SnippetString(`${beforeText}${getParagraph(i, 'ru')}${afterText}`)
       if (documentationVariants?.ru) {
         completion.documentation = new MarkdownString(documentationVariants.ru.replace('{i}', i.toString()))
       }
@@ -36,7 +36,7 @@ export const fishTextCompletionFactory = (metadata: IFishTextCompletionMetadata)
 
       if (isEnglishEnabled) {
         let completionEng = new CompletionItem(`${prefix.en}${i}`)
-        completionEng.insertText = new SnippetString(`${beforeText}${getParagraph(i)}${afterText}`)
+        completionEng.insertText = new SnippetString(`${beforeText}${getParagraph(i, 'en')}${afterText}`)
         if (documentationVariants?.en) {
           completionEng.documentation = new MarkdownString(documentationVariants.en.replace('{i}', i.toString()))
         }

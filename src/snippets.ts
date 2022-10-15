@@ -6,12 +6,12 @@ export const getFishTextCompletions = fishTextCompletionFactory({
     en: 'fish',
   },
   documentation: {
-    ru: 'Добавляет русский рыбный текст.',
-    en: 'Добавляет русский рыбный текст.\n\nТо же самое, что и `рыба`.',
+    ru: 'Adds a Russian text.',
+    en: 'Adds an English text.',
   },
   documentationVariants: {
-    ru: 'Добавляет русский рыбный текст из {i} предложений.',
-    en: 'Добавляет русский рыбный текст из {i} предложений.\n\nТо же самое, что и `рыба`.',
+    ru: 'Adds {i} sentences in Russian.',
+    en: 'Adds {i} sentences in English.',
   },
 })
 
@@ -21,12 +21,12 @@ export const getFishHTMLCompletions = fishTextCompletionFactory({
     en: 'fishtag',
   },
   documentation: {
-    ru: 'Добавляет русский рыбный текст, но в HTML-теге `<p>`.',
-    en: 'Добавляет русский рыбный текст, но в HTML-теге `<p>`.\n\nТо же самое, что и `рыбатег`.',
+    ru: 'Adds a Russian text wrapped in HTML tag `<p>`.',
+    en: 'Adds an English text wrapped in HTML tag `<p>`.',
   },
   documentationVariants: {
-    ru: 'Добавляет русский рыбный текст из {i} предложений, но в HTML-теге `<p>`.',
-    en: 'Добавляет русский рыбный текст из {i} предложений, но в HTML-теге `<p>`.\n\nТо же самое, что и `рыбатег`.',
+    ru: 'Adds a Russian text out of {i} sentences wrapped in HTML tag `<p>`.',
+    en: 'Adds an English text out of {i} sentences wrapped in HTML tag `<p>`.',
   },
   beforeText: '<${1|p,span,div,strong,em,b,i|}${2}>',
   afterText: '</${1}>${0}',
@@ -38,12 +38,12 @@ export const getFishJadeCompletions = fishTextCompletionFactory({
     en: 'fishtag',
   },
   documentation: {
-    ru: 'Добавляет русский рыбный текст, но в HTML-теге `<p>`.',
-    en: 'Добавляет русский рыбный текст, но в HTML-теге `<p>`.\n\nТо же самое, что и `рыбатег`.',
+    ru: 'Adds a Russian text wrapped in HTML tag `<p>`.',
+    en: 'Adds an English text wrapped in HTML tag `<p>`.',
   },
   documentationVariants: {
-    ru: 'Добавляет русский рыбный текст из {i} предложений, но в HTML-теге `<p>`.',
-    en: 'Добавляет русский рыбный текст из {i} предложений, но в HTML-теге `<p>`.\n\nТо же самое, что и `рыбатег`.',
+    ru: 'Adds a Russian text out of {i} sentences wrapped in HTML tag `<p>`.',
+    en: 'Adds an English text out of {i} sentences wrapped in HTML tag `<p>`.',
   },
   beforeText: '${1|p,span,div,strong,em,b,i|} ',
   afterText: '${0}',
