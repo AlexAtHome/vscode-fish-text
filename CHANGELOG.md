@@ -1,5 +1,9 @@
 # VS Code Fish Text
 
+## 1.2.0
+- The extension's name has been changed to "Fish Text"
+- Added the option in the Settings to generate English text with snippets `fish` and `fishtag`.
+
 ## 1.1.0
 - Added Settings section for this extension. This allows you to changes the languages list where snippets work.
 - Updated extension's dependencies (`speech-code`, `typescript`, `vscode` is replaced with `@types/vscode`).
