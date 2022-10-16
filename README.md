@@ -1,40 +1,38 @@
 # vscode-fish-text
 
-_This package is more useful for russian speaking users. Basically, it adds a russian alternative of "lorem ipsum" based on universal speech code (see the image below)._
+With this extension you can generate the random text that is composed with the Soviet universal speech code. The text can be generated in Russian and English languages.
 
-Этот пакет позволит прямо в редакторе добавить "рыбный" текст, составленный по универсальному коду речей.
+![The snippet of a Soviet document with the table of universal speech code](https://github.com/AlexAtHome/vscode-fish-text/raw/main/.github/fish-text-sample.jpg)
 
 ## Как пользоваться?
 
-Используйте сниппеты `рыба` и `fish`. Они добавляют текст из трёх предложений.
+Use snippets `рыба` or `fish`. They add a three sentence text.
 
-![Использование сниппета "рыба".gif](https://github.com/mamoruuu/vscode-fish-text/raw/main/.github/1.gif)
+!["рыба" snippet usage](https://github.com/AlexAtHome/vscode-fish-text/raw/main/.github/1.gif)
 
-Также в конце сниппета `рыба`/`fish` добавить число предложений, которое нужно добавить.
+You can also put a number of sentences (up to 10) to the end of the snippet.
 
-![Использование сниппета "рыба" из определённого количества предложений.gif](https://github.com/mamoruuu/vscode-fish-text/raw/main/.github/2.gif)
+!["fish" snippet usage with specified amount of sentences](https://github.com/AlexAtHome/vscode-fish-text/raw/main/.github/2.gif)
 
-Для языков, где используются HTML-теги, доступны сниппеты `рыбатег` и `fishtag`, которые добавляют текст, завёрнутым в HTML-тег на выбор (по умолчанию - `<p>`).
+For the languages where HTML tags are used, you can use snippets `рыбатег` and `fishtag`. They generate the text pre-wrapped in the HTML tags (`<p>` by default).
 
-![Использование сниппета "рыба" в HTML.gif](https://github.com/mamoruuu/vscode-fish-text/raw/main/.github/3-html.gif)
+!["fish" snippet usage in HTML](https://github.com/AlexAtHome/vscode-fish-text/raw/main/.github/3-html.gif)
 
-Вышеописанное также работает в Pug (Jade).
+Same works with Pug (Jade).
 
-![Использование сниппета "рыба" в Pug.gif](https://github.com/mamoruuu/vscode-fish-text/raw/main/.github/4-pug.gif)
+!["fish" snippet usage in Pug](https://github.com/AlexAtHome/vscode-fish-text/raw/main/.github/4-pug.gif)
 
-Список языков программирования, в котором будут работать сниппеты, можно изменять в настройках редактора.
+The list of languages where the snippets are available can be edited in the Settings.
 
-![Настройки расширения](https://github.com/mamoruuu/vscode-fish-text/raw/main/.github/settings.png)
+![Extension settings](https://github.com/AlexAtHome/vscode-fish-text/raw/main/.github/settings.png)
 
-## А зачем?
+## Why?
 
-Данный плагин будет полезен верстальщикам, которым нужно быстро откуда-то достать стенку текста *на кириллице* (пусть и бессмысленного). Русский текст на русскоязычных сайтах смотрится куда более органично.
+~~Why not?~~
 
-Кстати, для Atom Editor есть [аналогичный плагин](https://atom.io/packages/fish-text).
+This extension would be useful for Front End developers who want to quickly generate a text but want it to more meaningful than `lorem`.
 
-## Что это за магия? Почему такой складный текст?
-
-![Выдержка из старого советского документа с таблицей с универсальным кодом речей](https://github.com/mamoruuu/vscode-fish-text/raw/main/.github/fish-text-sample.jpg)
+There's also [the counterpart for Atom](https://atom.io/packages/fish-text) (it only supports the Russian text though).
 
 ## LICENSE
 
