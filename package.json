@@ -100,6 +100,7 @@
     "test": "echo 'no tests yet! lets just pretend everything works fine ^_^' && exit 0"
   },
   "devDependencies": {
+    "@types/node": "^18.11.0",
     "@types/vscode": "^1.18.0",
     "@typescript-eslint/eslint-plugin": "^5.40.0",
     "@typescript-eslint/parser": "^5.40.0",
