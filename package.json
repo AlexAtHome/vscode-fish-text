@@ -1,8 +1,8 @@
 {
   "name": "vscode-fish-text",
   "publisher": "mamoru",
-  "displayName": "Рыбный Текст",
-  "description": "Adds substitutional text in Russian",
+  "displayName": "Fish Text",
+  "description": "Adds substitutional text in Russian and English",
   "galleryBanner": {
     "color": "#7647ae",
     "theme": "dark"
